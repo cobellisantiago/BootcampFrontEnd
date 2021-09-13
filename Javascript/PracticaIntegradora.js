@@ -24,6 +24,10 @@ function Computer(ram, cpu, disco, monitor, gpu){
     this.gpu = gpu;
 }
 
+console.log()
+console.log()
+console.log("------------------ Ejercicio 2 -------------------")
+
 /* ------------------ Ejercicio 2 -------------------
  Crear 5 computadoras distintas y guardarlas (Array) de manera que 
  luego podamos consultar cuántas computadoras tenemos y poder 
@@ -49,6 +53,10 @@ showComputers(computers);
 
 console.log();
 
+console.log()
+console.log()
+console.log("------------------ Ejercicio 3 -------------------")
+
 /* ------------------ Ejercicio 3 -------------------
 Crear un nuevo Array a partir del primero, donde vamos a guardar solamente las computadoras con gpu.
  */
@@ -56,6 +64,10 @@ Crear un nuevo Array a partir del primero, donde vamos a guardar solamente las c
 let computersWithGpu = computers.filter(computer => computer.gpu);
 
 showComputers(computersWithGpu)
+
+console.log()
+console.log()
+console.log("------------------ Ejercicio 4 -------------------")
 
 /* ------------------ Ejercicio 4 -------------------
 Crear una función que calcule cuántos litros de nafta gasta un auto 
@@ -78,3 +90,75 @@ function fuelCost(pricePerLiter, kilometers){
 
 // Response should be $550
 console.log(fuelCost(110,250))
+
+console.log()
+console.log()
+console.log("------------------ Ejercicio 5 -------------------")
+
+/* ------------------ Ejercicio 5 -------------------
+Crear un array que contenga números del 1 al 10. 
+Retornar un nuevo array que contenga todos los números multiplicados por dos
+*/
+
+const numbers = [1,2,3,4,5,6,7,8,9,10];
+
+function getDoubles(){
+    return numbers.map((num) => {
+        return num * 2
+    });
+}
+
+console.log(getDoubles())
+
+console.log()
+console.log()
+console.log("------------------ Ejercicio 6 -------------------")
+
+/* ------------------ Ejercicio 6 -------------------
+Del array que devuelve el ejercicio número 5, filtrar los que sean mayores a 5
+*/
+
+function getBiggersThanFive(){
+    return getDoubles().filter(num  => num > 5)
+}
+
+console.log(getBiggersThanFive())
+
+console.log()
+console.log()
+console.log("------------------ Ejercicio 7 -------------------")
+
+/* ------------------ Ejercicio 7 ------------------- 
+Del array que devuelve el ejercicio 6, buscar el primero que sea mayor a 10
+*/
+
+function getFirstBiggerThanTen(){
+    return getDoubles().find(num => num > 10);
+}
+
+console.log(getFirstBiggerThanTen())
+
+console.log()
+console.log()
+console.log("------------------ Ejercicio 8 -------------------")
+
+/* ------------------ Ejercicio 8 ------------------- 
+Dado el siguiente array filtremos a los pokemones con poder menor a 10.
+let pokemones = [ { nombre: 'pikachu', poder: 12 }, { nombre: 'bulbasaur', poder: 6 }, 
+{ nombre: charizard, poder: 19 }, { nombre: squirtle, poder: 3 }, { nombre: 'mnewto', poder: 6 }, ]
+*/
+
+let pokemones = [ 
+    { nombre: 'pikachu', poder: 12 }, 
+    { nombre: 'bulbasaur', poder: 6 }, 
+    { nombre: 'charizard', poder: 19 }, 
+    { nombre: 'squirtle', poder: 3 }, 
+    { nombre: 'mnewto', poder: 6 }, 
+]
+
+
+function getPokemonsWithPowerMinusTen(){
+    return pokemones.filter( pokemon => pokemon.poder < 10)
+}
+
+console.log(getPokemonsWithPowerMinusTen())
